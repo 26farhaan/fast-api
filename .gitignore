@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+
+# SQLite database (jika hanya digunakan untuk dev)
+*.db
+
+# SSL Certificates (untuk lokal development saja)
+localhost.key
+localhost.crt
+
+# VSCode settings (optional, tergantung tim)
+.vscode/
+
+# MacOS & Windows files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

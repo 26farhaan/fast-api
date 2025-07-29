@@ -21,5 +21,6 @@ class UserRead(BaseModel):
     address: Optional[str]
     role: str
 
-    class Config:
-        orm_mode = True
+    model_config = {
+        "from_attributes": True  # ✅ ini untuk Pydantic v2
+    }

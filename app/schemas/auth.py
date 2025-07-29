@@ -8,7 +8,7 @@ class Token(BaseModel):
 
 
 class LoginRequest(BaseModel):
-    username: str
+    email: str
     password: str
     remember_me: bool | None = False
 

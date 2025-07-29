@@ -5,11 +5,13 @@ from passlib.context import CryptContext
 from sqlmodel import Session
 from app.schemas.auth import UserInDB
 from typing import Annotated
+from app.core.settings import settings
+
 
 from models import get_session
 
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-ALGORITHM = "HS256"
+SECRET_KEY = settings.my_secret_key
+ALGORITHM = settings.jwt_algorithm
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 SessionDep = Annotated[Session, Depends(get_session)]
